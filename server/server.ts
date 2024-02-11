@@ -1,14 +1,13 @@
 import express, { Request, Response } from "express";
 import compression from "compression"; // compresses requests
-import bodyParser from "body-parser";
 import user from "./routes/user";
+import cors from "cors";
 
-const app = express();
-const port = 8080;
+const app: any = express();
+const port: number = 8080;
 
+app.use(cors());
 app.use(compression());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/user", user);
 
