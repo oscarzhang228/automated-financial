@@ -21,12 +21,11 @@ const transaction_schema = new mongoose.Schema({
 });
 const Transaction = mongoose.model("transactions", transaction_schema);
 
-// 65c93b18c4cd85192b101b41
 /*
 Routes for /user
 */
 
-/* GET /user?id=
+/* GET /user/transaction?id=
 Returns a JSON in the format
     {
         id,
