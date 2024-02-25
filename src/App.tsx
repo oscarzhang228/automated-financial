@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Budget from "./pages/Budget";
 import Transactions from "./pages/Transactions";
-import Testing from "./pages/Testing";
+import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/budget" element={<Budget />} />
         <Route path="/transactions" element={<Transactions />} />
-        <Route path="/api-test" element={<Testing />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

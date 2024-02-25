@@ -1,5 +1,4 @@
 import express, { Request, Response } from "express";
-import compression from "compression"; // compresses requests
 import user from "./routes/user";
 import cors from "cors";
 
@@ -7,7 +6,6 @@ const app: any = express();
 const port: number = 8080;
 
 app.use(cors());
-app.use(compression());
 
 app.use("/user", user);
 
