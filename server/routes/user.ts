@@ -26,13 +26,15 @@ const user_schema = new mongoose.Schema({
   password: String,
 });
 const User = mongoose.model("users", user_schema);
-/*
-Routes for /user
-*/
 
-// Note: I'm going to directly store passwords but we need to encyrpt them.
-
-/* POST /user?email=&password? */
+/**
+ * POST /user?email=&password?
+ * Creates a new user in the database with the email and password and then get a unique id for the user and return it
+ * TODO: Password Encyrption
+ * @params email
+ * @params password
+ * @returns unique id of the user
+ */
 router.post("/", async (req: Request, res: Response) => {
   try {
     const email = req.query.email;
@@ -44,7 +46,13 @@ router.post("/", async (req: Request, res: Response) => {
   }
 });
 
-/* GET /user?username=&email*/
+/**
+ * GET /user?username=&email
+ * get the unique id for the user and return it
+ * @params email
+ * @params password
+ * @returns unique id of the user
+ */
 router.get("/", async (req: Request, res: Response) => {
   try {
     const email = req.query.email;
@@ -65,9 +73,12 @@ router.get("/", async (req: Request, res: Response) => {
   }
 });
 
-/* GET /user/transaction?id=
-Returns a JSON in the format
-    {
+/**
+ * GET /user/transaction?id=
+ * Returns a JSON in the format
+ * @params id
+ * @returns Transcation object
+ * {
         id,
         transaction_type (income vs expense),
         transaction_amount,
