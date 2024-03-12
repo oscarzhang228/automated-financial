@@ -4,6 +4,7 @@ import Budget from "./pages/Budget";
 import Transactions from "./pages/Transactions";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
+import "./scss/main.scss";
 
 function App() {
   return (
