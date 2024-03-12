@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 .navbar {
-  font-family: 'Roboto', sans-serif;
-  margin-top: -1.2vh;
-  margin-left: -1.2vh;
-  margin-right: -1.2vh;
-  
+  font-family: "Roboto", sans-serif;
+
   ul {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
@@ -22,7 +18,7 @@
         text-align: center;
         padding: 14px 8px;
         text-decoration: none;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
 
         &:hover {
           background-color: #111;
