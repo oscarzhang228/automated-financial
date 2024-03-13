@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from "./pages/Landing";
+import LandingPage from "./pages/LandingPage";
 import Budget from "./pages/Budget";
 import Transactions from "./pages/Transactions";
 import Login from "./pages/Login";
@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/budget" element={<Budget />} />
         <Route path="/transactions" element={<Transactions />} />
         <Route path="/login" element={<Login />} />
